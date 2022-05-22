@@ -122,7 +122,7 @@ public class GeocoderPlugin implements MethodCallHandler {
         protected List<Address> doInBackground(Void... params) {
             try {
                 plugin.assertPresent();
-                return geocoder.getFromLocationName(address, 20);
+                return geocoder.getFromLocationName(address, 5);
             } catch (IOException ex) {
                 return null;
             } catch (NotAvailableException ex) {
@@ -150,7 +150,7 @@ public class GeocoderPlugin implements MethodCallHandler {
         protected List<Address> doInBackground(Void... params) {
             try {
                 plugin.assertPresent();
-                return geocoder.getFromLocation(latitude, longitude, 20);
+                return geocoder.getFromLocation(latitude, longitude, 5);
             } catch (IOException ex) {
                 return null;
             } catch (NotAvailableException ex) {
